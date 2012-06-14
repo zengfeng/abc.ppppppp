@@ -1,0 +1,431 @@
+<!-- 
+	所有标点请用英文半角
+	id  对应的任务编号
+	name 任务名
+	mapid 地图编号
+	mapx  中心点X,Y
+	player 玩家列表  1,100,100|  用|区分player     用,区分坐标   
+	npc    npc列表
+	
+	action
+	target   动作的执行者  数值与上面player或npc对应 0,代表玩家avatar
+	direction  1:左边 2：右边
+	type       动作分类  1:对话，2:人物原地出现 3：模型转身 4: 模型攻击 5：死亡消失 6:冒金光特效 7：文字或物品从avatar上浮现 
+	                     8:星宿归位，任务人物消失化为金光升空的动画 9：从天而降 10：模型释放技能特效 11：后退 12：屏幕抖动
+						 14：引入过场动画  15: 模型无痕迹消失 16: 烟雾逃遁 17：星宿归位 18:黑屏之后文字 describe 为要显示的内容  19:模型闪避
+						 20：模型无痕迹出现  21：被攻击受创 22：打坐姿势出现 23：白色雾气环绕 24：融入体内  25：压黑底显示文字（有确定）
+						 26: 走路  27：切换动作  28:模型skill攻击  29：骑坐骑移动  31:被攻击后闪避（describe里填写相对便宜位置，填的是距离X,Y的正负值） 
+						 32:不断缩小至消失   34:NPC发光  36：从消失不断放大  37：模型使用第二套动作
+						 35: 2个模型绑定 describe里，若target在上层，则填0,ID 若target在下层，则填1,ID describe里填 0，33【NPCid】，x，y【X,Y为相对坐标】
+						
+	describe 动作描述
+	1:对话，对话内容
+	2:移动, 目标点坐标
+	3:转身,	当前面向的坐标
+	completeType  动作完成类型
+	0: 点击完成   其它表示延时
+ -->
+<quest>
+    <animation id="100001" name="大闹天宫" mapid="1" mapx="1230" mapy="901" player="" npc="1,1119,939|27,-1,-1|28,-1,-1|0,1300,998">
+	    <action id="1" target="0" type="3" describe="1119,939" completeType="0.1" />
+	    <action id="2" target="0" direction="1" type="1" describe="女娲娘娘，急召小神前来不知所为何事？" />
+		<action id="3" target="1" direction="2" type="1" describe="孙悟空不知为何被迷了心智，竟再度大闹天宫。故想请众仙暂避一时。" />
+		<action id="4" target="0" direction="1" type="1" describe="天庭有难，身为天神，我岂能临阵脱逃！" />
+	    <action id="5" target="1" direction="2" type="1" describe="果然勇气可嘉。也罢，我确有一件法宝可解此难，权且将它与你的兵器相融。" />
+		<action id="8" target="27" type="20" describe="1220,970" completeType="3.65" />
+		<action id="11" target="27" type="15" describe="" completeType="0.5" />
+		<action id="12" target="28" type="20" describe="1303,1004" completeType="1" />
+		<action id="13" target="28" type="15" describe="" completeType="0.5" />
+		<action id="14" target="0" direction="1" type="1" describe="此法宝的威力甚是强大，多谢娘娘恩赐。" />
+    </animation>
+
+    <animation id="100003" name="一战大圣" mapid="1" mapx="3082" mapy="2160" player="" npc="4002,2892,2023|0,3264,2173|21,-1,-1">
+	    <action id="1" target="0" type="3" describe="2892,2023" completeType="0.1" />
+		<action id="2" target="0" direction="1" type="1" describe="大圣，住手，休得再破坏天庭！" />
+		<action id="3" target="4002" direction="2" type="1" describe="呔，妖怪，哪里跑！" />
+		<action id="4" target="0" direction="1" type="1" describe="大圣果然心智全失，先用法宝制住他再做打算吧。" />
+		<action id="5" target="0" type="27" describe="6" completeType="0.5" />
+		<action id="6" target="0" type="28" describe="2951,2055" completeType="0.3" />
+		<action id="7" target="4002" type="31" describe="" completeType="1" />
+		<action id="8" target="0" type="1" direction="1" describe="为何，为何我的法宝伤不到他分毫……" />
+		<action id="9" target="4002" direction="2" type="1" describe="妖怪！你是在给俺老孙挠痒痒吗？休走！吃俺老孙一棒！" />
+		<action id="11" target="4002" type="28" describe="3191,2136" completeType="0.3" />
+		<action id="12" target="0" type="27" describe="7" completeType="1" />
+		<action id="5" target="0" type="27" describe="6" completeType="1" />
+		<action id="13" target="0" type="27" describe="20" completeType="0.5" />
+		<action id="14" target="0" direction="1" type="1" describe="唔……好厉害……难不成吾命休矣？" />
+		<action id="15" target="0" type="18" describe="突然，一道身影闪过……" completeType="2" />
+		<action id="16" target="21" type="2" describe="3149,2139" completeType="2" />
+		<action id="17" target="21" direction="2" type="1" describe="不可力敌！先撤！" />
+	</animation>
+
+	<animation id="100005" name="再战大圣" mapid="1" mapx="3082" mapy="2160" player="0,3264,2173" npc="35,-1,-1|0,3264,2173|33,-1,-1|4002,2892,2023|29,-1,-1|27,-1,-1|32,-1,-1">
+	    <action id="1" target="0" type="3" describe="2892,2023" completeType="0.1" />
+		<action id="2" target="4002" direction="2" type="1" describe="妖怪，上次被你逃了，这次可没那么好运了，受死吧！" />
+		<action id="3" target="0" direction="1" type="1" describe="大圣，得罪了！" />
+		<action id="4" target="33" type="20" describe="3263,2177" completeType="1" />
+		<action id="5" target="35" type="20" describe="3308,2228" completeType="1.5" />
+		<action id="6" target="35" type="15" describe="3308,2228" completeType="0.01" />
+		<action id="7" target="32" type="20" describe="2930,2049" completeType="0.3" />
+		<action id="8" target="32" type="15" describe="" completeType="0.01" />
+		<action id="7" target="29" type="20" describe="2893,2042" completeType="1" />
+		<action id="9" target="29" type="15" describe="" completeType="0.01" />
+		<action id="11" target="4002" direction="2" type="1" describe="为什么……为什么我动不了了！" />
+		<action id="4" target="33" type="20" describe="3263,2177" completeType="0.01" />
+	</animation>
+
+	<animation id="100006" name="修仙之境" mapid="1" mapx="3825" mapy="1886" player="" npc="21,3863,1924|28,-1,-1|0,3615,1913|31,-1,-1|36,-1,-1">
+	    <action id="1" target="0" type="3" describe="3863,1924" completeType="0.01" />
+		<action id="2" target="21" type="37" describe="" completeType="0.7" />
+		<action id="3" target="31" type="20" describe="3794,1780" completeType="0.01" />
+		<action id="4" target="36" type="20" describe="3530,1585" completeType="1.2" />
+		<action id="5" target="31" type="15" describe="" completeType="2" />
+		<action id="6" target="28" type="20" describe="3615,1910" completeType="1.5" />
+		<action id="7" target="28" type="15" describe="" completeType="1" />
+		<!--<action id="11" target="0" type="25" describe="你获得了“修仙葫芦”" />aa-->
+		<action id="12" target="0" type="1" direction="1" describe="多谢恩人相赠！" />
+		<action id="13" target="21" direction="2" type="1" describe="你若想更上一层，还需经过多重考验，去找二郎神吧，他会指点你的。" />
+	</animation>
+
+
+	<animation id="100008" name="二重考验" mapid="1" mapx="1001" mapy="2648" player="" npc="7,-1,-1|8,-1,-1|17,-1,-1|0,-1,-1|9,-1,-1">
+	    <action id="1" target="0" type="22" describe="1000,2610" completeType="0.5" />
+		<action id="2" target="7" type="20" describe="985,2590" completeType="0.1" />
+		<action id="3" target="17" direction="2" type="1" describe="雷乃天地间之浩然正气，若心存邪念，是承受不住的……" />
+		<action id="5" target="0" direction="1" type="1" describe="若连此天雷都受不住，日后将如何面对九天雷劫！" />
+		<action id="4" target="7" type="15" describe="985,2590" completeType="0.1" />
+		<action id="6" target="8" type="20" describe="996,2612" completeType="0.1" />
+		<action id="7" target="17" direction="2" type="1" describe="渐渐的，被火焰包围，你的肉体足以抵御如此煎熬吗？" />
+		<action id="9" target="0" direction="1" type="1" describe="凤凰浴火可重生，就让火焰磨练我的肉体吧！" />
+		<action id="8" target="8" type="15" describe="996,2612" completeType="0.1" />
+		<action id="10" target="9" type="20" describe="1002,2497" completeType="0.1" />
+		<action id="11" target="17" direction="2" type="1" describe="诡异飘忽，出其不意，小心你的背后……" />
+		<action id="12" target="9" type="26" describe="745,2621" completeType="1.2" />
+	    <action id="13" target="9" type="26" describe="1004,2750" completeType="1.2" />
+		<action id="14" target="9" type="26" describe="1239,2627" completeType="1.2" />
+		<action id="19" target="9" type="26" describe="999,2627" completeType="0.5" />
+		<action id="21" target="0" direction="1" type="1" describe="不管从何处袭来，都别想让我移动半步！" />
+		<action id="20" target="9" type="15" describe="" completeType="0.1" />
+		<action id="22" target="17" direction="2" type="1" describe="看来“苦字”境也困不住你，去九天玄女处接受最后一重考验吧！" />
+	</animation>
+
+	<animation id="100014" name="踏上征途" mapid="1" mapx="4936" mapy="2904" player="0,5036,2852" npc="25,-1,-1">
+		<action id="1" target="25" type="20" describe="4443,2664" completeType="0.5"/>
+		<action id="2" target="25" type="26" describe="5051,2930" completeType="2.5"/>
+		<action id="4" target="25" type="15" describe="" completeType="0.01"/>
+		<action id="5" target="0" type="29" describe="" completeType="0.8"/>
+		<action id="6" target="0" type="26" describe="5723,3253" completeType="3"/>
+		<action id="7" target="0" type="33" describe="2|5109,3031" completeType="0.5"/>
+	</animation>
+
+	<animation id="101002" name="无妄之灾" mapid="2" mapx="4679" mapy="2712" player="0,4704,2758" npc="100,4641,2672">
+	    <action id="1" target="0" type="3" describe="4641,2672" completeType="0.01" />
+		<action id="2" target="0" direction="1" type="1" describe="这泉水，为何喝下后会感到四肢乏力？" />
+		<action id="3" target="100" direction="2" type="1" describe="怎么可能？[10:1]莫非中毒了！"/>
+		<action id="4" target="0" direction="1" type="1" describe="中毒？这可如何是好？" />
+		<action id="5" target="100" direction="2" type="1" describe="你赶紧去找老巫医，他兴许有方法替你解毒。"/>	
+	</animation>
+	
+	<animation id="101006" name="元凶" mapid="2" mapx="4214" mapy="1725" player="" npc="112,4360,1650|128,4359,1749|103,4330,1712|123,-1,-1|0,3928,1721">
+	    <action id="1" target="0" type="3" describe="4330,1712" completeType="0.01" />
+		<action id="2" target="0" direction="1" type="1" describe="你是谁？在对“玄武泉”做什么！" />
+		<action id="3" target="103" direction="2" type="1" describe="且慢动手，请听我解释！" />
+		<action id="4" target="103" type="15" describe="" completeType="0.01" />
+		<action id="5" target="128" type="15" describe="" completeType="0.01" />
+		<action id="5" target="112" type="15" describe="" completeType="0.01" />
+		<action id="6" target="123" type="20" describe="4270,1592" completeType="1" />
+		<action id="7" target="0" type="27" describe="6" completeType="0.01" />
+		<action id="8" target="0" type="27" describe="21" completeType="1" />
+		<action id="8" target="0" direction="1" type="1" describe="少废话！先吃我一剑！"/>
+		<action id="9" target="0" type="4" describe="4216,1623" completeType="0.5" />
+		<action id="10" target="123" type="31" describe="30,-22" completeType="2.5" />
+		<action id="11" target="0" type="1" direction="1" describe="你竟然不还手！"/>
+		<action id="12" target="0" type="4" describe="4216,1623" completeType="0.5" />
+		<action id="13" target="123" type="31" describe="30,-22" completeType="2.5" />
+		<action id="14" target="123" type="1"direction="2" describe="[10:1]莫急，一切都是误会，我无心伤害任何人。"/>
+		<action id="15" target="0" type="1" direction="1" describe="我亲眼所见，何来的误会？"/>
+		<action id="16" target="123" type="1"direction="2" describe="我这有一颗解药，你服下便知我所言非虚。"/>
+		<action id="17" target="0" type="18" describe="你半信半疑地服下丹药……" completeType="2" />
+		<action id="19" target="123" type="1"direction="2" describe="怎样，[10:1]有否感觉好些了？"/>
+		<action id="15" target="0" type="1" direction="1" describe="姑娘，方才是在下鲁莽了，得罪之处还请见谅！"/>
+	</animation>
+
+    <animation id="101008" name="解药" mapid="2" mapx="4232" mapy="1606" player="" npc="103,4330,1712|128,-1,-1|127,-1,-1|4105,-1,-1|0,4268,1650|133,-1,-1">
+		<action id="1" target="0" type="18" describe="解药一配就是几个时辰……" completeType="2" />
+		<action id="2" target="128" type="20" describe="4359,1749" completeType="0.01" />
+		<action id="3" target="0" type="3" describe="4330,1712" completeType="0.01" />
+		<action id="4" target="0" direction="1" type="1" describe="泉水似乎变得清澈起来了……" />
+		<action id="5" target="127" type="20" describe="4325,1702" completeType="3" />
+		<action id="6" target="103"  direction="2" type="1" describe="泉水之毒已被冰晶薄荷的药性中和，这下大家可以安心饮用了。" />
+		<action id="7" target="4105" type="20" describe="4537,1412" completeType="0.01" />
+		<action id="7" target="4105" type="27" describe="21" completeType="0.5" />
+		<action id="8" target="0" type="3" describe="4537,1412" completeType="0.01" />
+	    <action id="9" target="4105" type="1" direction="2" describe="臭[10:3]，乖乖将冰晶薄荷交出来，我饶你不死！" />
+		<action id="10" target="0" direction="1" type="1" describe="哪来的妖怪，休得放肆，受死吧！" />
+		<action id="11" target="0" type="27" describe="6" completeType="0.01" />
+	    <action id="12" target="0" type="27" describe="21" completeType="0.01" />
+	    <action id="13" target="0" type="4" describe="4455,1448" completeType="1" />
+	    <action id="7" target="4105" type="5" describe="" completeType="1" />
+	    <action id="8" target="133" type="20" describe="4535,1353" completeType="1" />
+	    <action id="8" target="133" type="26" describe="4325,1432" completeType="1" />
+	    <action id="8" target="133" type="26" describe="4271,1600" completeType="0.8" />
+	    <action id="8" target="133" type="15" describe="" completeType="0.5" />
+	    <action id="9" target="0" type="34" describe="" completeType="1" /><!--玩家模型闪光-->
+		<!--<action id="11" target="0" type="25" describe="你获得了“锐金元神”" />aa-->
+	</animation>	
+	
+	<animation id="101010" name="星宿归位" mapid="2" mapx="4651" mapy="1945" player="0,4564,1961" npc="129,-1,-1|123,4727,1841|130,-1,-1|132,-1,-1">
+	    <action id="1" target="0" type="3" describe="4727,1841" completeType="0.01" />
+		<action id="2" target="129" type="20" describe="4737,1849" completeType="0.1" />
+		<action id="2" target="0" type="1" direction="1" describe="姑娘，你身上怎会有金光流转？" />
+		<action id="3" target="123" type="1" direction="2" describe="我也如坠云雾呢……诶，我的掌中为何多出两个字来？" />
+		<action id="4" target="132" type="20" describe="4590,1623" completeType="2.2" />
+		<action id="9" target="132" type="15" describe="" completeType="0.01" />
+		<action id="5" target="0" type="1" direction="1" describe="莫非姑娘是二十八星宿之一！你方才的举动唤醒了被掩埋的神性——善良。" />
+		<action id="6" target="123" type="1" direction="2" describe="二十八星宿，我是天庭的神仙？" />
+		<action id="7" target="0" type="1" direction="1" describe="没错，女娲娘娘派我下凡寻找二十八星宿，原来姑娘就是其中之一，你速速回天庭向娘娘复命吧！" />
+		<action id="8" target="123" type="1" direction="2" describe="好，后会有期！" />
+		<action id="9" target="129" type="15" describe="" completeType="0.01" />
+		<action id="10" target="123" type="15" describe="" completeType="0.01" />
+		<action id="11" target="130" type="20" describe="4435,1235" completeType="0.3" />
+		<action id="11" target="130" type="15" describe="" completeType="1" />
+		<action id="12" target="0" type="18" describe="星宿——金蟾鬼母已归位！" completeType="2" />
+	</animation>
+	
+	<animation id="101014" name="英雄救美" mapid="2" mapx="1075" mapy="3024" player="0,1035,2943" npc="113,905,2875|4105,1435,2856|33,-1,-1">
+		<action id="1" target="4105" type="27" describe="21" completeType="0.01" />
+		<action id="2" target="0" type="3" describe="1435,2856" completeType="0.01" />
+		<action id="3" target="113" type="1" direction="2" describe="不要过来！再靠近，我就跳下去了！" />
+		<action id="4" target="4105" type="1" direction="2" describe="叫吧！你就是叫破喉咙也没有用！" />
+		<action id="6" target="0" type="27" describe="6" completeType="0.01" />
+		<action id="7" target="0" type="27" describe="21" completeType="0.01" />
+		<action id="8" target="0" type="1" direction="1" describe="妖怪！放开那个姑娘！" />
+		<action id="9" target="4105" type="1" direction="2" describe="哪来的臭[10:3]，滚开，少管闲事！" />
+		<action id="10" target="4105" type="4" describe="1096,2904" completeType="1" />
+		<action id="12" target="0" type="27" describe="7" completeType="1" />
+		<action id="13" target="0" type="27" describe="6" completeType="1" />
+		<action id="10" target="113" type="1" direction="2" describe="[10:1]小心！" />
+		<action id="10" target="0" type="1" direction="1" describe="糟糕，还没从中毒的虚弱中完全恢复过来……" />
+		<action id="7" target="4105" type="4" describe="1096,2904" completeType="1" />
+		<action id="12" target="0" type="27" describe="7" completeType="1" />
+		<action id="13" target="0" type="27" describe="6" completeType="1" />
+		<action id="11" target="113" type="1" direction="2" describe="[10:1]，别管我了，你先逃吧。" />
+		<action id="12" target="0" type="1" direction="1" describe="姑娘放心，我一定会安然无恙地将你救出去的。" />
+		<action id="13" target="4105" type="1" direction="2" describe="哼，不知死活的东西！" />
+	    <action id="8" target="0" type="27" describe="20" completeType="0.1" />
+		<action id="14" target="0" type="1" direction="1" describe="屏气凝神，气运丹田……" />
+		<action id="13" target="0" type="27" describe="6" completeType="0.01" />
+		<action id="7" target="0" type="27" describe="21" completeType="0.5" />
+		<action id="5" target="0" type="35" describe="1,33,-4,-5" completeType="1" />
+		<action id="14" target="0" type="1" direction="1" describe="受死吧，妖怪！" />
+		<action id="15" target="0" type="4" describe="1335,2856" completeType="1.2" />
+		<action id="16" target="4105" type="5" describe="" completeType="0.5" />
+		<action id="5" target="33" type="15" describe="" completeType="1" />
+		<action id="19" target="0" type="1" direction="1" describe="姑……姑娘，没……没事了！" />
+		<action id="20" target="113" type="1" direction="2" describe="多谢[10:1]救命之恩，但你好像伤得很重……" />
+		<action id="21" target="0" type="1" direction="1" describe="我没事……休息一会儿就好……" />
+		<action id="22" target="113" type="1" direction="2" describe="我带你去找我师傅吧，他老人家的医术很高明，一定能把你治好的！" />
+	</animation>
+	
+	<animation id="101015" name="运气疗伤" mapid="2" mapx="1830" mapy="1337" player="" npc="105,1491,1286|113,1585,1143|135,-1,-1|136,-1,-1|0,1640,1247">
+		<action id="1" target="0" type="3" describe="1491,1286" completeType="0.01" />
+		<action id="2" target="113" type="1" direction="2" describe="师傅，方才我被一群妖怪围攻，是[10:4]冒死救了我，但[10:4]受了很重的伤，你快救救[10:4]吧！" />
+		<action id="3" target="105" type="1" direction="2" describe="打坐调息，运气凝神。" />
+		<action id="4" target="0" type="27" describe="20" completeType="1" />
+		<action id="5" target="136" type="20" describe="1562,1150" completeType="1" />
+		<action id="5" target="136" type="15" describe="" completeType="0.01" />
+		<action id="5" target="135" type="20" describe="1647,1292" completeType="1.5" />
+		<action id="5" target="135" type="15" describe="" completeType="0.2" />	
+		<action id="6" target="0" type="18" describe="两个时辰后……" completeType="2" />
+		<action id="7" target="0" type="1" direction="1" describe="多谢前辈再次出手相救！" />
+	</animation>
+	
+	<animation id="101018" name="寻找龙魂" mapid="2" mapx="3063" mapy="3097" player="0,3271,3048" npc="106,3345,3016"><!--106,3345,3016-->
+	   <action id="1" target="106" type="1" direction="2"  describe="[10:2]，我能感觉到龙魂的气息就在树洞的最深处，但是路上妖怪丛生，我还是不给[10:2]你添麻烦了！" />
+	   <action id="2" target="0" type="1" direction="1"  describe="嗯，小妹妹，你就在这等我吧，我速去速回。" />
+	</animation> 
+	 
+	<animation id="101020" name="神龙苏醒" mapid="2" mapx="3566" mapy="879" player="0,3455,929" npc="109,-1,-1|134,3405,267">
+	   <action id="1" target="0" type="3" describe="3600,840" completeType="0.01" />
+	   <action id="2" target="0" type="1" direction="1" describe="龙神，你能听到我的召唤吗？龙魂我替你寻回来了！" />
+	   <action id="3" target="109" type="20" describe="3456,771" completeType="1" />
+	   <action id="4" target="109" type="34" describe="" completeType="1" /><!--龙魂闪光-->
+	   <action id="5" target="109" type="26" describe="3544,556" completeType="1" />
+	   <action id="6" target="109" type="15" describe="" completeType="0.01" />
+	   <action id="7" target="134" type="34" describe="" completeType="2" />
+	   <action id="8" target="109" type="1" direction="2" describe="终于，是苏醒的时刻了！" />
+	   <action id="9" target="0" type="12" describe="" completeType="2" />
+	   <action id="2" target="0" type="1" direction="1" describe="神龙大人，你终于醒来了吗？" />   
+	   <action id="10" target="109" type="1" direction="2" describe="是你唤醒了我吗？小神仙！" />
+	   <action id="2" target="0" type="1" direction="1" describe="神龙大人，在您沉睡之际，凶兽肆虐树之国，盘踞于深幽树洞内！" />   
+	   <action id="10" target="109" type="1" direction="2" describe="感谢你替我寻回“龙魂”，今后树之国就交给我来守卫，放心吧！" />
+	  </animation> 
+	  
+	  <animation id="101036" name="连通九阳" mapid="2" mapx="3371" mapy="3209" player="0,3372,3137" npc="109,-1,-1"><!--106,3345,3016-->
+	   <action id="1" target="109" type="1" direction="2"  describe="我催动的力量很强，小心起见，你还是退后一些吧。" />
+	   <action id="2" target="0" type="12" describe="" completeType="2" />
+	   <action id="3" target="0" type="18" describe="吊桥在巨大的力量下被渐渐修复了……" completeType="2" />
+	   <action id="4" target="109" type="1" direction="2"  describe="好了，前往九阳国的道路已经打通。他日你若去到九阳国，记得替我问候后羿。" />
+	   <action id="5" target="0" type="1" direction="1"  describe="多谢木神龙大人相助！" />
+	</animation> 
+	  
+	  <animation id="102003" name="胆小如鼠" mapid="3" mapx="2018" mapy="2094" player="0,-1,-1" npc="202,2023,2028|226,-1,-1|4201,1763,2044">
+	   <action id="1" target="4201" type="1" direction="2" describe="你踩到我尾巴就想这么跑了？" />
+       <action id="2" target="202" type="1" direction="1" describe="不要过来，妖怪，不要过来！" />
+	   <action id="3" target="4201" type="1" direction="2" describe="哪里逃！" />
+	   <action id="4" target="202" type="15" describe="" completeType="0.01" />
+	   <action id="5" target="226" type="20" describe="2023,2028" completeType="0.01" />
+	   <action id="6" target="226" type="26" describe="2257,2151" completeType="1.2" />
+	   <action id="7" target="226" type="15" describe="" completeType="0.01" />
+	   <action id="8" target="0" type="18" describe="夸父落荒而逃！" completeType="2" />
+	   <action id="9" target="0" type="1" direction="1" describe="竟然被如此弱小的妖怪追杀……失去“勇气”竟至如此地步？" />
+	  </animation>
+	  
+	   <animation id="102005" name="寻回勇气" mapid="302" mapx="1450" mapy="800" player="0,-1,-1" npc="33,-1,-1|234,-1,-1|4224,1288,687|212,1589,789|224,-1,-1|">
+	   <action id="1" target="4224" type="1" direction="2" describe="你是逃不出我的手掌心的，乖乖受死吧！" />
+	   <action id="2" target="4224" type="28" describe="" completeType="0.5" />
+	   <action id="3" target="234" type="20" describe="1368,728" completeType="1.5" />
+	   <action id="4" target="234" type="15" describe="" completeType="1" />
+       <action id="4" target="212" type="1" direction="2" describe="别过来！师兄，你在哪？救命！" />
+	   <action id="3" target="0" type="18" describe="这一刻，夸父似乎忘记了恐惧，飞奔向前！" completeType="2" />
+	   <action id="4" target="224" type="20" describe="1473,759" completeType="1" />
+	   <action id="5" target="224" type="1" direction="2" describe="师弟别怕，有我在这，你尽管放心！" />
+	   <action id="6" target="212" type="1" direction="2" describe="师兄！你终于来了，小心那妖怪……" />
+	   <action id="7" target="224" type="1" direction="2" describe="妖怪，你竟敢伤害我师弟，受死吧！" />
+	   <action id="8" target="224" type="35" describe="1,33,-20,-5" completeType="1" />   
+	   <action id="9" target="224" type="28" describe="1320,720" completeType="1.5"/>
+	   <action id="10" target="4224" type="27" describe="7" completeType="1" />
+	   <action id="11" target="4224" type="27" describe="6" completeType="1" />
+	   <action id="12" target="0" type="1" direction="1" describe="为了保护亲人，失去神性的夸父竟也能爆发出如此强大的勇气……" />
+	   <action id="13" target="0" type="1" direction="1" describe="夸父，带着你师弟先走，剩下的就交给我吧！" />
+	  </animation>
+	  
+	  <animation id="102008" name="生死决战" mapid="304" mapx="1888" mapy="1400" player="0,-1,-1" npc="33,-1,-1|234,-1,-1|129,-1,-1|4225,1748,1222|224,2073,1363|229,-1,-1|213,-1,-1">
+	   <action id="1" target="4225" type="1" direction="2" describe="夸父，你这无勇的废人，竟敢擅闯此地，简直是找死！" />
+	   <action id="2" target="224" type="1" direction="2" describe="你以为被诅咒夺走了勇气，我便无力反抗吗？为了师弟，你今日唯有一死，以除后患！" />
+	   <action id="3" target="4225" type="1" direction="2" describe="好大的口气，不知死活的废物，下地狱去吧！" />
+	   <action id="4" target="0" type="18" describe="麒麟巨大的威压扑面而来！" completeType="2" />
+	   <action id="5" target="129" type="20" describe="1756,1204" completeType="1.5" />
+	   <action id="6" target="0" type="12" describe="" completeType="2" />
+	   <action id="7" target="224" type="1" direction="2" describe="今天，就做个了结吧！" />
+	   <action id="8" target="224" type="35" describe="1,33,-20,-5" completeType="0.01" /> 
+	   <action id="9" target="224" type="34" describe="" completeType="1.5" /> 
+	   <action id="10" target="224" type="28" describe="1800,1250" completeType="1"/>
+	   <action id="12" target="4225" type="27" describe="7" completeType="0.3" />
+	   <action id="13" target="4225" type="27" describe="6" completeType="0.3" />
+	   <action id="14" target="234" type="20" describe="1735,1204" completeType="1.5" />
+	   <action id="15" target="234" type="15" describe="" completeType="0.5" />
+	   <!--action id="16" target="213" type="20" describe="1888,1400" completeType="1.5" />
+	   <action id="17" target="234" type="15" describe="" completeType="1" /-->
+	   <action id="11" target="129" type="15" describe="" completeType="0.01" />
+	   <action id="18" target="4225" type="1" direction="2" describe="凡人，你彻底激怒了我，你这是自寻死路！" />
+	   <action id="19" target="224" type="1" direction="2" describe="[10:1]，趁现在！" />
+	  </animation> 
+	  
+	<animation id="102009" name="破除恶诅" mapid="3" mapx="2065" mapy="2065" player="0,1826,2033" npc="214,-1,-1|227,-1,-1|129,-1,-1|202,2069,1995">
+	    <action id="1" target="0" type="3" describe="4727,1841" completeType="0.01" />
+		<action id="2" target="129" type="20" describe="2072,1999" completeType="0.1" />
+		<action id="3" target="0" type="1" direction="1" describe="一切都结束了，诅咒应该已经破除了……" />
+		<action id="4" target="214" type="20" describe="1925,1800" completeType="2.2" />
+		<action id="9" target="214" type="15" describe="" completeType="0.01" />
+		<action id="5" target="0" type="1" direction="1" describe="你的神性已经恢复，是时候回天庭向女娲娘娘报道了。" />
+		<action id="6" target="202" type="1" direction="2" describe="[10:1]，来日天庭再见！" />
+		<action id="9" target="129" type="15" describe="" completeType="0.01" />
+		<action id="10" target="202" type="15" describe="" completeType="0.01" />
+		<action id="11" target="227" type="20" describe="1780,1410" completeType="0.4" />
+		<action id="11" target="227" type="15" describe="" completeType="1" />
+		<action id="12" target="0" type="18" describe="星宿——夸父已归位！" completeType="2" />
+	</animation>  
+	  
+	  <animation id="102016" name="灵药寒霜" mapid="3" mapx="4355" mapy="3265" player="0,4181,3323" npc="225,4290,3223">
+	    <action id="1" target="0" type="3" describe="4290,3223" completeType="0.01" />
+		<action id="2" target="0" type="1" direction="1" describe="咦？师姐，你不是和师傅在一起吗？怎么独自来到这九阳国？" />
+        <action id="3" target="225" type="1" direction="2" describe="是师傅嘱咐我来找你的，说你或许会遇到麻烦需要我帮忙。" />
+	</animation>  
+	
+	 <animation id="102019" name="化血神刀" mapid="3" mapx="2437" mapy="3364" player="0,2346,3423" npc="223,2527,3360|216,2270,2960|217,-1,-1|33,-1,-1">
+	    <action id="1" target="0" type="3" describe="2360,3111" completeType="0.01" />
+		<action id="2" target="223" type="3" describe="2360,3111" completeType="0.01" />
+		<action id="3" target="223" type="1" direction="2" describe="这股熟悉的气息……" />
+		<action id="4" target="0" type="1" direction="1" describe="姑娘，你看，这块奇形怪状的石头上有一行字。" />
+		<action id="5" target="223" type="1" direction="2" describe="“等我回来”……是，是我父亲的字迹，他没死……他没死！" />
+		<action id="6" target="0" type="1" direction="1" describe="这块奇石似乎感应到你的存在，一直在闪烁着光芒？" />
+		<action id="7" target="223" type="1" direction="2" describe="等等……这块石头是我家的家传法宝——化血神刀！" />
+		<action id="9" target="216" type="15" describe="" completeType="0.01" />
+		<action id="11" target="217" type="20" describe="1810,2790" completeType="6" />
+		<action id="12" target="217" type="15" describe="" completeType="0.5" />
+        <action id="13" target="223" type="1" direction="2" describe="爹爹，我一定会好好学习使用这把神刀，等待你归来的那天！" />
+	</animation>  
+	
+	<animation id="102020" name="千恩万谢" mapid="3" mapx="2437" mapy="3364" player="0,2577,3418" npc="223,2412,3331">
+	    <action id="1" target="0" type="3" describe="2412,3331" completeType="1" />
+	    <action id="2" target="0" type="12" describe="" completeType="2" />
+        <action id="3" target="0" type="18" describe="一股灼热的气流四处流窜！" completeType="2" />
+		<action id="4" target="223" type="1" direction="2" describe="大事不好！九个太阳的封印松动了！" />
+	</animation> 
+	
+	<animation id="102021" name="初露锋芒" mapid="3" mapx="2847" mapy="2700" player="0,2802,2889" npc="233,2961,2736|4203,2548,2580|4272,2510,2750|4271,2754,2583|4206,-1,-1|218,-1,-1">
+	    <action id="1" target="0" type="3" describe="2548,2580" completeType="0.01" />
+		<action id="3" target="0" type="1" direction="1" describe="好多火屑乌鸦，看来是受到被封印的太阳的召唤，前来破开封印的。" />
+		<action id="4" target="233" type="1" direction="2" describe="糟糕！现在如何是好？" />
+		<action id="5" target="0" type="1" direction="1" describe="化血神刀是件强力的法宝，不妨就用这些凶兽来替它开锋吧！" />
+		<action id="6" target="233" type="1" direction="2" describe="好！看我的！" />
+		<action id="7" target="233" type="28" describe="2668,2696" completeType="2" />
+		<action id="8" target="4203" type="5" describe="" completeType="1" />
+		<action id="9" target="4271" type="5" describe="" completeType="1" />
+		<action id="10" target="4272" type="5" describe="" completeType="1" />
+		<action id="9" target="4271" type="15" describe="" completeType="0.01" />
+		<action id="10" target="4272" type="15" describe="" completeType="0.5" />
+		<action id="12" target="0" type="18" describe="面前出现了一个神秘的女子……" completeType="2" />
+		<action id="11" target="4206" type="20" describe="2500,2622" completeType="2" />
+	    <action id="2" target="4206" type="1" direction="2" describe="就凭你们，也想阻止我！" />
+	</animation> 
+	
+	 <animation id="102022" name="舍生相救" mapid="3" mapx="2925" mapy="2725" player="0,3235,2810" npc="4206,2500,2622|218,-1,-1|237,-1,-1|220,-1,-1|129,-1,-1|234,-1,-1|238,-1,-1|239,-1,-1|241,-1,-1|9,-1,-1">
+	   <action id="1" target="0" type="3" describe="2662,2557" completeType="0.01" />
+       <action id="2" target="234" type="20" describe="2552,2714" completeType="1.35" />
+	   <action id="3" target="234" type="15" describe="" completeType="0.3" />
+	   <action id="4" target="239" type="20" describe="2675,2650" completeType="1.35" />
+	   <action id="5" target="239" type="15" describe="" completeType="0.3" />
+	   <action id="6" target="241" type="20" describe="2651,2568" completeType="1.35" />
+	   <action id="7" target="241" type="15" describe="" completeType="0.3" />
+	   <action id="2" target="4206" type="1" direction="2" describe="你们必须为自己的所作所为付出应有的代价！" />
+	   <action id="3" target="4206" type="28" describe="" completeType="1" />
+	   <action id="4" target="218" type="20" describe="2600,2540" completeType="0.4" />
+	   <action id="4" target="218" type="15" describe="" completeType="0.01" />
+       <action id="5" target="0" type="18" describe="突然，精卫冲出，挡在了你身前！！！" completeType="2" />
+	   <action id="7" target="237" type="20" describe="3139,2740" completeType="0.1" />
+	   <action id="6" target="0" type="1" direction="1" describe="不要！"/>
+	   <action id="10" target="220" type="1" direction="2" describe="噗，英雄，我……" />
+	   <action id="11" target="0" type="1" direction="1" describe="别说话，我这就运气替你疗伤，你要撑住，会没事的。" />
+	   <action id="12" target="220" type="1" direction="2" describe="英雄，我本以为没有机会报答您的恩情了……好困……" />
+	   <action id="13" target="0" type="1" direction="1" describe="你千万别睡过去，我这就带你找我师傅，他一定会有办法救你的！笨蛋，你为什么要替我挡那一下……为什么……" />
+	   <action id="14" target="238" type="20" describe="3020,2745" completeType="0.25" />
+	   <action id="12" target="238" type="1" direction="2" describe="何方妖魔，竟敢如此放肆！" />
+	   <action id="13" target="238" type="37" describe="" completeType="0.7" />
+	   <action id="14" target="9" type="20" describe="2926,2716" completeType="0.25" />
+	   <action id="14" target="9" type="26" describe="2500,2622" completeType="2" />
+	   <action id="14" target="9" type="15" describe="" completeType="0.01" />
+	   <action id="10" target="4206" type="27" describe="7" completeType="0.5" />
+	   <action id="11" target="4206" type="27" describe="6" completeType="1" />
+	   <action id="15" target="0" type="12" describe="" completeType="2" />
+	   <action id="2" target="4206" type="1" direction="2" describe="别高兴的太早了，太阳的力量会彻底摧毁你们！" />	   
+	 </animation>  
+	   
+	   <animation id="102024" name="感恩" mapid="3" mapx="2961" mapy="2700" player="0,2908,2816" npc="129,-1,-1|219,-1,-1|228,-1,-1|205,3154,2755">
+	    <action id="1" target="0" type="3" describe="3100,2725" completeType="0.01" />
+		<action id="3" target="129" type="20" describe="3163,2763" completeType="0.1" />
+	    <action id="4" target="0" type="1" direction="1" describe="精卫姑娘，你已经回想起自己的身份了吧，有这星宿之光护体，你的伤势想必不会有大碍了！" />	
+        <action id="5" target="205" type="1" direction="2" describe="英雄，我真的没有死！多谢两位相救，您们的恩情……小女子无以为报！" />
+		<action id="6" target="219" type="20" describe="3010,2545" completeType="2.2" />
+		<action id="7" target="219" type="15" describe="" completeType="0.01"/>
+		<action id="8" target="0" type="1" direction="1" describe="精卫姑娘，先赶快回天庭复命吧。不用记挂着报恩，只要你好好修行，时刻谨记匡扶正义，就是对我最好的报答。" />
+		<action id="9" target="129" type="15" describe="" completeType="0.01" />
+		<action id="10" target="205" type="15" describe="" completeType="0.01" />
+		<action id="11" target="228" type="20" describe="3450,2147" completeType="0.4" />
+		<action id="11" target="228" type="15" describe="" completeType="1" />
+		<action id="12" target="0" type="18" describe="星宿——精卫已归位！" completeType="2" />
+	</animation>  
+
+</quest>	
+

@@ -1,0 +1,27 @@
+<map>
+  <scene id="201" name="蝙蝠层" width="3840" height="3072" pieceW="256" pieceH="256" distant="">
+    <gate kind="in" standX="1896" standY="784" id="0" x="1874" y="654"/>
+    <gate kind="next" standX="1459" standY="1987" id="1" toScene="2" x="1371" y="1950"/>
+    <npc id="4102" x="2622" y="1244" moveRadius="250" attackRadius="60">
+      <point x="2490" y="1208"/>
+      <point x="2516" y="1335"/>
+      <point x="2586" y="1358"/>
+      <point x="2669" y="1374"/>
+      <point x="2737" y="1348"/>
+    </npc>
+    <npc id="4101" x="1964" y="1079" moveRadius="250" attackRadius="60">
+      <point x="1864" y="1179"/>
+      <point x="1914" y="1179"/>
+      <point x="1964" y="1179"/>
+      <point x="2014" y="1179"/>
+      <point x="2064" y="1179"/>
+    </npc>
+    <npc id="4103" x="1723" y="1908" moveRadius="0" attackRadius="200">
+      <point x="1623" y="2008"/>
+      <point x="1673" y="2008"/>
+      <point x="1723" y="2008"/>
+      <point x="1773" y="2008"/>
+      <point x="1823" y="2008"/>
+    </npc>
+  </scene>
+</map>

@@ -1,0 +1,28 @@
+<Reward>
+	<Donate name="开天斧奖励">
+		<item id="1" max="1">
+		<![CDATA[<font color="#FFF000">第1名奖励：   </font><font color="#CC6600">潜力保护符x2</font><font color="#FFFFFF">、1000修为</font>]]>
+		</item>
+		<item id="2" max="2">
+		<![CDATA[<font color="#FFF000">第2名奖励：   </font><font color="#CC6600">潜力保护符x1</font><font color="#FFFFFF">、800修为</font>]]>
+		</item>
+		<item id="3" max="3">
+		<![CDATA[<font color="#FFF000">第3名奖励：   </font><font color="#CC6600">潜力保护符x1</font><font color="#FFFFFF">、600修为</font>]]>
+		</item>
+		<item id="4" max="11">
+		<![CDATA[<font color="#FFF000">4-10名奖励：   </font><font color="#CC6600">随机高级物品x1</font><font color="#FFFFFF">、500修为</font>]]>
+		</item>
+		<item id="11" max="51">
+		<![CDATA[<font color="#FFF000">11-50名奖励：   </font><font color="#6600CC">随机中级物品x1</font><font color="#FFFFFF">、400修为</font>]]>
+		</item>
+		<item id="51" max="101">
+		<![CDATA[<font color="#FFF000">51-100名奖励：   </font><font color="#6600CC">随机中级物品x1</font><font color="#FFFFFF">、200修为</font>]]>
+		</item>
+		<item id="101" max="301">
+		<![CDATA[<font color="#FFF000">101-300名奖励：   </font><font color="#009900">随机初级物品x1</font><font color="#FFFFFF">、100修为</font>]]>
+		</item>
+		<item id="301" max="301">
+		<![CDATA[<font color="#FFF000">301名之后奖励：   </font><font color="#009900">随机中级物品x1</font><font color="#FFFFFF">、50修为</font>]]>
+		</item>
+	</Donate>
+</Reward>

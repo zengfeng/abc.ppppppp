@@ -1,0 +1,41 @@
+﻿<quide>
+<!-- 	 * 1-20 每个国的新手引导(新进入一国时，播放序章动画) 
+		 * 
+		 * 21  仙葫引导
+		 * 22  法宝
+		 * 24  元神
+		 * 24  黄泉深渊
+		 * 	targetId    目标ID 参照menu.xml中的id    step中如果也有targetId 则会以step中的为准
+		 *  arrowType   1:气泡荷花   2:气泡有文字   3:气泡感叹号    4:新手引导箭头
+		 *  type 1=关闭界面 
+		 *	message    	箭头上的文字
+		 	x:相对于 targetId容器的坐标X
+		 	y:相对于 targetId容器的坐标Y
+		 */
+ -->
+
+	<item id="21"  targetId="15"  >
+		<step id="1" arrowType="1" message="" x="10" y="-26" />
+		<step id="2" arrowType="4" message="请点击荷花" x="91" y="300" />
+		<step id="3" arrowType="4" message="请点击关闭" x="550" y="5" type="1" />
+	</item>
+	
+	<item id="22"  targetId="4"  >
+		<step id="1" arrowType="3" message="" x="10" y="-26" />
+		<step id="2" arrowType="4" message="请点击提交" x="228" y="362" />
+		<step id="2" arrowType="4" message="请点击提交" x="228" y="362" />
+		<step id="3" arrowType="4" message="请点击关闭" x="394" y="-46" type="1" />
+	</item>
+	
+	<item id="23"  targetId="5" >
+		<step id="1" arrowType="3" message="" x="10" y="-26" />
+		<step id="2" arrowType="4" message="请点击按钮" x="51" y="367" />
+	</item>
+	
+	<item id="24"  targetId="138" >
+		<step id="1" arrowType="3" message="" x="10" y="-26" />
+		<step id="2" arrowType="4" message="请点击召唤" x="-187" y="14" />
+		<step id="3" arrowType="4" message="请点击拾取" x="-175" y="-12" />
+	</item>
+
+</quide>

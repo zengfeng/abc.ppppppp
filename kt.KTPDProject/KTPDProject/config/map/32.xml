@@ -1,0 +1,12 @@
+<map>
+  <scene id="32" name="家族寻宝" width="2560" height="2252" pieceW="256" pieceH="256" distant="">
+    <gate kind="in" standX="1627" standY="1670" id="0" x="1498" y="1575"/>
+    <npc id="5009" x="622" y="813">
+      <point x="711" y="928"/>
+      <point x="746" y="950"/>
+      <point x="758" y="988"/>
+      <point x="790" y="1007"/>
+      <point x="813" y="1048"/>
+    </npc>
+  </scene>
+</map>

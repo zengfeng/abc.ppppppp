@@ -1,0 +1,27 @@
+<map>
+  <scene id="301" name="熔岩地穴" width="2304" height="2560" pieceW="256" pieceH="256" distant=""  assetsMapId="205">
+     <gate kind="in" standX="636" standY="260" x="556" y="162"/>
+    <gate kind="next" standX="1327" standY="1836" toScene="3" x="1242" y="1815"/>
+    <npc id="4141" x="2477" y="2647" moveRadius="250" attackRadius="60">
+      <point x="2377" y="2747"/>
+      <point x="2427" y="2747"/>
+      <point x="2477" y="2747"/>
+      <point x="2527" y="2747"/>
+      <point x="2577" y="2747"/>
+    </npc>
+    <npc id="4142" x="1266" y="2036" moveRadius="250" attackRadius="60">
+      <point x="1166" y="2136"/>
+      <point x="1216" y="2136"/>
+      <point x="1266" y="2136"/>
+      <point x="1316" y="2136"/>
+      <point x="1366" y="2136"/>
+    </npc>
+    <npc id="4143" x="1494" y="1168"  moveRadius="0" attackRadius="200">
+      <point x="1394" y="1268"/>
+      <point x="1444" y="1268"/>
+      <point x="1494" y="1268"/>
+      <point x="1544" y="1268"/>
+      <point x="1594" y="1268"/>
+    </npc>
+  </scene>
+</map>

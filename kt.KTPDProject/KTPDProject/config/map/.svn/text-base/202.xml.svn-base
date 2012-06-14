@@ -1,0 +1,27 @@
+<map>
+  <scene id="202" name="大虫层" width="3328" height="3072" pieceW="256" pieceH="256" distant="">
+    <gate kind="in" standX="2216" standY="2356" id="0" x="2194" y="2351"/>
+    <gate kind="next" standX="1059" standY="961" id="1" toScene="2" x="944" y="877"/>
+    <npc id="4111" x="1883" y="2155" moveRadius="250" attackRadius="60">
+      <point x="1783" y="2255"/>
+      <point x="1833" y="2255"/>
+      <point x="1883" y="2255"/>
+      <point x="1933" y="2255"/>
+      <point x="1983" y="2255"/>
+    </npc>
+    <npc id="4112" x="2166" y="1490" moveRadius="250" attackRadius="60">
+      <point x="2066" y="1590"/>
+      <point x="2116" y="1590"/>
+      <point x="2166" y="1590"/>
+      <point x="2216" y="1590"/>
+      <point x="2266" y="1590"/>
+    </npc>
+    <npc id="4113" x="1311" y="885"  moveRadius="0" attackRadius="200">
+      <point x="1211" y="985"/>
+      <point x="1261" y="985"/>
+      <point x="1311" y="985"/>
+      <point x="1361" y="985"/>
+      <point x="1411" y="985"/>
+    </npc>
+  </scene>
+</map>

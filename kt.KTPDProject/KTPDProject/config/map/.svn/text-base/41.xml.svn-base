@@ -1,0 +1,19 @@
+<map>
+  <scene id="41" name="BOSS战" width="4096" height="3328" pieceW="256" pieceH="256" distant="">
+    <gate kind="in" standX="2896" standY="1708" id="0" x="2929" y="1656"/>
+    <npc id="5001" x="1455" y="900">
+      <point x="1619" y="963"/>
+      <point x="1241" y="912"/>
+      <point x="1319" y="804"/>
+      <point x="1505" y="1040"/>
+      <point x="1667" y="882"/>
+    </npc>
+    <npc id="2005" x="2487" y="1470">
+      <point x="2487" y="1470"/>
+      <point x="-45" y="-30"/>
+      <point x="-45" y="-30"/>
+      <point x="-45" y="-30"/>
+      <point x="-45" y="-30"/>
+    </npc>
+  </scene>
+</map>

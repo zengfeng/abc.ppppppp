@@ -1,0 +1,27 @@
+<map>
+  <scene id="203" name="蝶妖层" width="3328" height="3072" pieceW="256" pieceH="256" distant="">
+    <gate kind="in" standX="1482" standY="2419" id="0" x="1319" y="2390"/>
+    <gate kind="next" standX="1451" standY="828" id="1" toScene="2" x="1420" y="703"/>
+    <npc id="4121" x="1884" y="2041" moveRadius="250" attackRadius="60">
+      <point x="1784" y="2141"/>
+      <point x="1834" y="2141"/>
+      <point x="1884" y="2141"/>
+      <point x="1934" y="2141"/>
+      <point x="1984" y="2141"/>
+    </npc>
+    <npc id="4122" x="1058" y="1793" moveRadius="250" attackRadius="60">
+      <point x="958" y="1893"/>
+      <point x="1008" y="1893"/>
+      <point x="1058" y="1893"/>
+      <point x="1108" y="1893"/>
+      <point x="1158" y="1893"/>
+    </npc>
+    <npc id="4123" x="1695" y="863"  moveRadius="0" attackRadius="200">
+      <point x="1595" y="963"/>
+      <point x="1645" y="963"/>
+      <point x="1695" y="963"/>
+      <point x="1745" y="963"/>
+      <point x="1795" y="963"/>
+    </npc>
+  </scene>
+</map>

@@ -1,0 +1,34 @@
+<map>
+  <scene id="44" name="采矿" width="2568" height="1933" pieceW="256" pieceH="256" distant="">
+    <gate kind="in" standX="1219" standY="526" id="0" x="1165" y="422"/>
+    <npc id="3009" x="1065" y="1177">
+      <point x="899" y="1122"/>
+      <point x="921" y="1176"/>
+      <point x="961" y="1224"/>
+      <point x="1013" y="1254"/>
+      <point x="1056" y="1268"/>
+      <point x="908" y="1060"/>
+      <point x="941" y="1003"/>
+    </npc>
+    <npc id="3009" x="1234" y="1067">
+      <point x="991" y="956"/>
+      <point x="1042" y="929"/>
+      <point x="1102" y="913"/>
+      <point x="1162" y="905"/>
+      <point x="1223" y="900"/>
+      <point x="1299" y="905"/>
+      <point x="1356" y="915"/>
+      <point x="1409" y="933"/>
+      <point x="1467" y="955"/>
+      <point x="1513" y="980"/>
+    </npc>
+    <npc id="3009" x="1424" y="1138">
+      <point x="1497" y="1211"/>
+      <point x="1532" y="1181"/>
+      <point x="1560" y="1136"/>
+      <point x="1564" y="1084"/>
+      <point x="1560" y="1026"/>
+      <point x="1445" y="1249"/>
+    </npc>
+  </scene>
+</map>

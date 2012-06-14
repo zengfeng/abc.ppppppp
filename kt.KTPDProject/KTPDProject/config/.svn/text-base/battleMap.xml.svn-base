@@ -1,0 +1,43 @@
+<battle>
+<!-- 
+  id 前后台通信
+  type  0 加载特定的背景
+  		1 加载当前地图为战斗背景
+  url   0：图片url     1：地图ID
+  x,y   以资源的（x,y）作为当前用户屏幕的中心点
+  
+ -->
+	<item id='1' type='0' url='assets/battleBG/cloud.jpg' x='1130' y='650'/>
+	<item id='2' type='0' url='assets/battleBG/tree.jpg' x='1520' y='980'/>
+	<item id='3' type='0' url='assets/battleBG/9sun.jpg' x='1020' y='930'/>
+	<item id='5' type='0' url='assets/battleBG/x.jpg' x='600' y='600'/>
+	<item id='6' type='0' url='assets/battleBG/x.jpg' x='600' y='600'/>
+	<item id='7' type='0' url='assets/battleBG/x.jpg' x='600' y='600'/>
+	<item id='8' type='0' url='assets/battleBG/x.jpg' x='600' y='600' />
+	<item id='9' type='0' url='assets/battleBG/x.jpg' x='600' y='600'/>
+	<item id='10' type='0' url='assets/battleBG/x.jpg' x='600' y='600'/>
+	<item id='20' type='0' url='assets/battleBG/x.jpg' x='600' y='600'/>
+	<item id='30' type='0' url='assets/battleBG/x.jpg' x='600' y='600'/>
+	<item id='31' type='0' url='assets/battleBG/x.jpg' x='600' y='600'/>
+	<item id='32' type='0' url='assets/battleBG/x.jpg' x='600' y='600'/>
+	<item id='41' type='1' url='20' x='1500' y='900'/>
+	<item id='42' type='0' url='assets/battleBG/x.jpg' x='600' y='600'/>
+	<item id='100' type='0' url='assets/battleBG/x.jpg' x='600' y='600'/>
+	<item id='201' type='0' url='assets/battleBG/treedugeon.jpg' x='1300' y='700'/>
+	<item id='202' type='1' url='20' x='1300' y='620' />
+	<item id='203' type='0' url='assets/battleBG/treedugeon.jpg' x='1300' y='700'/>
+	<item id='204' type='1' url='20' x='1340' y='850'/>
+	<item id='205' type='0' url='assets/battleBG/treedugeon.jpg' x='1300' y='700'/>
+	<item id='206' type='1' url='20' x='1472' y='672'/>
+	<item id='301' type='0' url='assets/battleBG/9sun.jpg' x='1020' y='930'/>
+	<item id='302' type='1' url='20' x='1136' y='600' />
+	<item id='303' type='0' url='assets/battleBG/9sun.jpg' x='1020' y='930'/>
+	<item id='304' type='1' url='20' x='1800' y='1150'/>
+	<item id='305' type='0' url='assets/battleBG/9sun.jpg' x='1020' y='930'/>
+	<item id='306' type='1' url='20' x='1840' y='1072'/>
+	<item id='1000001' type='1' url='20' x='1938' y='780'/>                         <!--国战background截图-->
+	<item id='300000' type='0' url='assets/battleBG/guard.jpg' x='1960' y='768'/>   <!--运镖background-->
+	<item id='500000' type='0' url='assets/battleBG/guard.jpg' x='1960' y='768'/>   <!--家族运镖background-->
+	<item id='600000' type='0' url='assets/battleBG/guard.jpg' x='1960' y='768'/>   <!--竞技场background-->
+	<item id='900000' type='0' url='assets/battleBG/lockboss.jpg' x='2283' y='1940'/>   <!--锁妖塔background-->
+</battle>

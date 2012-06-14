@@ -1,0 +1,13 @@
+<map>
+  <scene id="306" name="熔岩地穴" width="3840" height="3072" pieceW="256" pieceH="256" distant="">
+    <gate kind="in" standX="3187" standY="2270" x="3187" y="2270"/>
+    <gate kind="next" standX="1750" standY="1131" toScene="10101" x="1650" y="1063"/>
+    <monster difficulty="1,2" wave="1" x="1954" y="1113" moveRadius="150" attackRadius="130" passColor="0x0">
+      <point x="1931" y="1218"/>
+      <point x="1995" y="1219"/>
+      <point x="2027" y="1208"/>
+      <point x="2050" y="1190"/>
+      <point x="2072" y="1150"/>
+    </monster>
+  </scene>
+</map>

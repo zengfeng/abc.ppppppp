@@ -1,0 +1,43 @@
+<vip>
+	<!--
+		level VIP等级
+		gold VIP各等级所需充值的元宝总数
+		open 相应等级的VIP开启的特权id
+		openNumber 相应特权的数值，若为0则表示“开启”
+	 -->
+	<vipconfig level="0" gold="0" open="3,6" openNumber="12,3"/>
+	<vipconfig level="1" gold="100" open="1,2,3,4,5,6" openNumber="0,0,16,0,0,6"/>
+	<vipconfig level="2" gold="500" open="1,2,3,4,5,6,7" openNumber="0,0,16,0,0,6,8"/>
+	<vipconfig level="3" gold="1000" open="1,2,3,4,5,6,7,8" openNumber="0,0,16,0,0,6,8,50"/>
+	<vipconfig level="4" gold="2000" open="1,2,3,4,5,6,7,8,9" openNumber="0,0,16,0,0,6,7,50,18"/>
+	<vipconfig level="5" gold="5000" open="1,2,3,4,5,6,7,8,9,10" openNumber="0,0,20,0,0,6,7,60,18,0"/>
+	<vipconfig level="6" gold="10000" open="1,2,3,4,5,6,7,8,9,10,11,12" openNumber="0,0,20,0,0,6,6,60,18,0,30,0"/>
+	<vipconfig level="7" gold="20000" open="1,2,3,4,5,6,7,8,9,10,11,12" openNumber="0,0,20,0,0,6,5,70,24,0,30,0"/>
+	<vipconfig level="8" gold="50000" open="1,2,3,4,5,6,7,8,9,10,11,12" openNumber="0,0,24,0,0,6,4,80,24,0,30,0"/>
+	<vipconfig level="9" gold="100000" open="1,2,3,4,5,6,7,8,9,10,11,12" openNumber="0,0,24,0,0,6,3,90,30,0,30,0"/>
+	<vipconfig level="10" gold="200000" open="1,2,3,4,5,6,7,8,9,10,11,12" openNumber="0,0,28,0,0,6,3,100,30,0,40,0"/>
+	<vipconfig level="11" gold="500000" open="1,2,3,4,5,6,7,8,9,10,11,12" openNumber="0,0,28,0,0,6,2,110,36,0,40,0"/>
+	<vipconfig level="12" gold="1000000" open="1,2,3,4,5,6,7,8,9,10,11,12" openNumber="0,0,28,0,0,6,2,120,36,0,50,0"/>
+	
+	<!--
+		id 特权id
+		type 1为特权数值，2为特权“开启”或“无”
+		name 特权名称
+		text 特权数值单位，如果为空则表示该特权是开启
+		default 默认值
+	 -->
+	<item id="1" type="2" name="神秘商店" text="" defaultNum="-1"/>
+	<item id="2" type="2" name="元神系统的高级召唤" text="" defaultNum="-1"/>
+	<item id="3" type="1" name="副本每日进入次数" text="次" defaultNum="12"/>
+	<item id="4" type="2" name="副本挂机" text="" defaultNum="-1"/>
+	<item id="5" type="2" name="日常任务自动传送" text="" defaultNum="-1"/>
+	<item id="6" type="1" name="锁妖塔每日进入次数" text="次" defaultNum="3"/>
+	<item id="7" type="1" name="竞技场冷却时间" text="分钟" defaultNum="10"/>
+	<item id="8" type="1" name="知己个数上限" text="位" defaultNum="30"/>
+	<item id="9" type="1" name="神器铸造次数" text="次" defaultNum="12"/>
+	<item id="10" type="2" name="自动强化" text="" defaultNum="-1"/>
+	<item id="11" type="1" name="元神召唤次数" text="次" defaultNum="20"/>
+	<item id="12" type="2" name="元神批量召唤" text="" defaultNum="-1"/>
+	<item id="13" type="1" name="元神召唤次数" text="次" defaultNum="1"/>
+	<item id="14" type="1" name="元神召唤次数" text="次" defaultNum="1"/>
+</vip>

@@ -1,0 +1,13 @@
+<map>
+  <scene id="206" name="深幽树洞" width="3584" height="3328" pieceW="256" pieceH="256" distant="">
+    <gate kind="next" standX="1366" standY="772" toScene="10101" x="1202" y="685"/>
+    <gate kind="in" standX="2715" standY="1852" x="2715" y="1852"/>
+    <monster wave="1" x="1472" y="701" moveRadius="200" attackRadius="100" passColor="0x0">
+      <point x="1431" y="867"/>
+      <point x="1508" y="875"/>
+      <point x="1583" y="845"/>
+      <point x="1628" y="795"/>
+      <point x="1649" y="704"/>
+    </monster>
+  </scene>
+</map>

@@ -1,0 +1,27 @@
+<map>
+  <scene id="205" name="树妖层" width="3584" height="4096" pieceW="256" pieceH="256" distant="">
+    <gate kind="in" standX="2853" standY="2492" id="0" x="2841" y="2419"/>
+    <gate kind="next" standX="1299" standY="1091" id="1" toScene="2" x="1237" y="983"/>
+    <npc id="4141" x="2477" y="2647" moveRadius="250" attackRadius="60">
+      <point x="2377" y="2747"/>
+      <point x="2427" y="2747"/>
+      <point x="2477" y="2747"/>
+      <point x="2527" y="2747"/>
+      <point x="2577" y="2747"/>
+    </npc>
+    <npc id="4142" x="1266" y="2036" moveRadius="250" attackRadius="60">
+      <point x="1166" y="2136"/>
+      <point x="1216" y="2136"/>
+      <point x="1266" y="2136"/>
+      <point x="1316" y="2136"/>
+      <point x="1366" y="2136"/>
+    </npc>
+    <npc id="4143" x="1494" y="1168"  moveRadius="0" attackRadius="200">
+      <point x="1394" y="1268"/>
+      <point x="1444" y="1268"/>
+      <point x="1494" y="1268"/>
+      <point x="1544" y="1268"/>
+      <point x="1594" y="1268"/>
+    </npc>
+  </scene>
+</map>
